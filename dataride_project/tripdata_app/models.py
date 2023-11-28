@@ -1,7 +1,5 @@
 from django.db import models
 
-from django.db import models
-
 class TripData(models.Model):
     trip_duration = models.IntegerField()
     start_time = models.DateTimeField()
