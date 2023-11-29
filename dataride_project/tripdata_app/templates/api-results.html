@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>API Results</h1>
+{% if data %}
+    <p>Results for Station ID: {{ station_id }}</p>
+    <div class="table-wrapper">
+        <table class="api-results-table">
+            <thead>
+                <tr>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Duration (seconds)</th>
+                    <th>Start Station ID</th>
+                    <th>Start Station Name</th>
+                    <th>Start Latitude</th>
+                    <th>Start Longitude</th>
+                    <th>End Station ID</th>
+                    <th>End Station Name</th>
+                    <th>End Latitude</th>
+                    <th>End Longitude</th>
+                    <th>Bike ID</th>
+                    <th>User Type</th>
+                    <th>Birth Year</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for trip in data %}
+                <tr>
+                    <td>{{ trip.start_time }}</td>
+                    <td>{{ trip.stop_time }}</td>
+                    <td>{{ trip.trip_duration }}</td>
+                    <td>{{ trip.start_station_id }}</td>
+                    <td>{{ trip.start_station_name }}</td>
+                    <td>{{ trip.start_station_latitude }}</td>
+                    <td>{{ trip.start_station_longitude }}</td>
+                    <td>{{ trip.end_station_id }}</td>
+                    <td>{{ trip.end_station_name }}</td>
+                    <td>{{ trip.end_station_latitude }}</td>
+                    <td>{{ trip.end_station_longitude }}</td>
+                    <td>{{ trip.bikeid }}</td>
+                    <td>{{ trip.usertype }}</td>
+                    <td>{{ trip.birth_year }}</td>
+                    <td>{{ trip.get_gender_display }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% else %}
+    <p>No data found for the given Station ID.</p>
+{% endif %}
+{% endblock %}

@@ -24,3 +24,47 @@ body {
 .title {
     margin-top: 1.5rem;
 }
+
+/* API Results */
+
+.table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+    
+}
+.api-results-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.api-results-table th,
+.api-results-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.api-results-table th {
+    background-color: #040404;
+    color: white;
+}
+
+.api-results-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.api-results-table tr:hover {
+    background-color: #ddd;
+}
+
+.api-results-table td {
+    font-size: 0.9em;
+}
+
+@media screen and (max-width: 600px) {
+    .api-results-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
