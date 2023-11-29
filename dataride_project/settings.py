@@ -106,9 +106,9 @@ WSGI_APPLICATION = 'dataride_project.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        # Feel free to alter this value to suit your needs.
+        default=os.environ.get('DATABASE_URL'),  
         conn_max_age=600,
-        conn_health_checks=True
+        conn_health_checks=True,
     )
 }
 
