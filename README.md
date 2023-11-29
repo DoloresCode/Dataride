@@ -22,6 +22,15 @@ Key Features:
 - **API Results**: Displays the results of the API query in a clear, tabulated format.
 
 
+### Images
+
+<img width="894" alt="Dataride_homepage" src="https://github.com/DoloresCode/Dataride/assets/117631390/cf854b42-3cf4-4871-a890-b4776b621c67">
+
+<img width="740" alt="Dataride_api_tester" src="https://github.com/DoloresCode/Dataride/assets/117631390/c7531ebd-b014-4d15-90a6-e3980243a39a">
+
+<img width="999" alt="Dataride_results" src="https://github.com/DoloresCode/Dataride/assets/117631390/4bf35505-f772-4af1-b2fa-a955cb04881e">
+
+
 ## Getting Started
 
 # Prerequisites

@@ -12,11 +12,20 @@ body {
 }
 
 /* Home Page */
+
 .image-home-top {
     object-fit: cover;
     height: 100%;
     width: 100%;
     text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
 }
 
 /* About Page */
