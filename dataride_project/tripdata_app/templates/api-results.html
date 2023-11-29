@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>API Results</h1>
+<h1 class="api-title-part">API Results</h1>
 {% if data %}
-    <p>Results for Station ID: {{ station_id }}</p>
+    <p class="api-title-result-ST-ID">Results for Station ID: {{ station_id }}</p>
     <div class="table-wrapper">
         <table class="api-results-table">
             <thead>
