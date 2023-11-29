@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <section class="hero is-medium is-bold image-home-top" style="background-image: url({% static 'tripdata_app/images/homepage_bicycle_img.jpeg' %}); background-size: cover;">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-1 has-text-white">
+                    Welcome to DataRide
+                </h1>
+                <h2 class="subtitle has-text-white">
+                Explore City Bike Trip Data Like Never Before
+                </h2>
+                <div class="buttons">
+                <a href="{% url 'about' %}" class="button is-info">Learn More</a>
+                <a href="{% url 'api-tester' %}" class="button is-primary">API Tester</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+        <div class="content">
+            <h3>About DataRide</h3>
+            <p>
+            DataRide is an innovative platform that allows users to query and analyze city bike trip data. Our goal is to provide insights into urban mobility and promote a sustainable and efficient transportation system.
+            </p>
+            <p>
+            Use our API Tester to explore data based on various criteria, such as station IDs and trip durations. Discover patterns, trends, and more with DataRide.
+            </p>
+        </div>
+        </div>
+    </section>
+
+{% endblock %}

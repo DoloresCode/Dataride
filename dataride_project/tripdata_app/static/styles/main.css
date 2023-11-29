@@ -1,0 +1,26 @@
+body {
+    font-family: 'San Francisco', 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #121212;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.logo-navb {
+    width: 30px; 
+    height: auto; 
+}
+
+/* Home Page */
+.image-home-top {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+/* About Page */
+
+.title {
+    margin-top: 1.5rem;
+}
