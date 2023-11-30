@@ -106,9 +106,9 @@ WSGI_APPLICATION = 'dataride_project.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL'),  
-        conn_max_age=600,
-        conn_health_checks=True,
+        # Feel free to alter this value to suit your needs.
+        default='postgresql://postgres:postgres@localhost:5432/dataride',
+        conn_max_age=600
     )
 }
 
@@ -159,3 +159,7 @@ if not DEBUG:
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'tripdata_app/static/')]
+
+
+# Render deployment
+# https://render.com/docs/deploy-django#update-your-app-for-render
