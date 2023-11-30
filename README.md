@@ -47,7 +47,7 @@ Before you begin, ensure you have the following installed:
 
 - git clone https://github.com/DoloresCode/Dataride.git
 
-- cd Dataride/dataride_project
+- cd Dataride
 
 2. **Set up a Virtual Environment (create and activate):**
 
