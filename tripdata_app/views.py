@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import Http404
 #from django.views import View 
 # from django.http import HttpResponse #text response
 from django.views.generic.base import TemplateView #html response
@@ -25,7 +26,14 @@ def api_results(request):
 
     if station_id:
         try:
-            number_of_entries = int(number_of_entries)  # Convert to integer
+            station_id = int(station_id) # convert station_id to integer
+        except ValueError:
+            raise Http404("Invalid input: station ID must be an integer.") #if no possible to convert to integerreturn value error
+
+        # Get number_of_entries from request, default to 10 if not provided or not an integer
+        number_of_entries = request.GET.get('number_of_entries', 10)
+        try:
+            number_of_entries = int(number_of_entries)
         except ValueError:
             number_of_entries = 10  # Default to 10 if conversion fails
 
